@@ -56,7 +56,7 @@ macro(ament_auto_add_gmock target)
   endif()
 
   # add exported information from found dependencies
-  ament_target_dependencies(${target}
+  ament_target_dependencies(${target} SYSTEM
     ${${PROJECT_NAME}_FOUND_BUILD_DEPENDS}
     ${${PROJECT_NAME}_FOUND_TEST_DEPENDS}
   )
